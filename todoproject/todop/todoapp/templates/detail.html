@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="shadow card">
+        <div class="card-body">
+          <h5 class="card-title">NAME OF TODO: <b>{{detail.name}}</b><br></h5>
+          <p>IT'S PRIORITY VALUE: <b>{{detail.priority}}</b><br></p>
+           <p>DATE: <b>{{detail.date}}</b><br></p>
+
+          <a class="btn btn-danger" href="{% url 'todoapp:delete' detail.id %}">DONE</a>
+          <a class="btn btn-success" href="{% url 'todoapp:update' detail.id %}">UPDATE</a>
+        </div>
+      </div>
+
+
+
+{% endblock %}
